@@ -8,8 +8,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class ConditionalBeansRunner implements CommandLineRunner {
 
-    @Autowired
     private Message message;
+
+    public ConditionalBeansRunner(Message message) {
+        this.message = message;
+    }
 
 
     //if welcomeMessage.enabled = true (in application.properties),
